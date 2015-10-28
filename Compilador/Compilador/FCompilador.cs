@@ -16,5 +16,10 @@ namespace Compilador
         {
             InitializeComponent();
         }
+
+        private void buttonProcurar_Click(object sender, EventArgs e)
+        {
+            openFileDialogProcurar.ShowDialog();
+        }
     }
 }

@@ -39,6 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelSintatico = new System.Windows.Forms.Label();
             this.labelResultadoSintatico = new System.Windows.Forms.Label();
+            this.openFileDialogProcurar = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitCPrincipal)).BeginInit();
             this.splitCPrincipal.Panel1.SuspendLayout();
             this.splitCPrincipal.Panel2.SuspendLayout();
@@ -89,6 +90,7 @@
             this.buttonProcurar.Name = "buttonProcurar";
             this.buttonProcurar.Size = new System.Drawing.Size(23, 22);
             this.buttonProcurar.Text = "Procurar arquivo do código.";
+            this.buttonProcurar.Click += new System.EventHandler(this.buttonProcurar_Click);
             // 
             // buttonLimpar
             // 
@@ -199,6 +201,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelSintatico;
         private System.Windows.Forms.Label labelResultadoSintatico;
+        private System.Windows.Forms.OpenFileDialog openFileDialogProcurar;
     }
 }
 
