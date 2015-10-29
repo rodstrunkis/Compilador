@@ -34,19 +34,19 @@
             this.buttonProcurar = new System.Windows.Forms.ToolStripButton();
             this.buttonLimpar = new System.Windows.Forms.ToolStripButton();
             this.buttonExecutar = new System.Windows.Forms.ToolStripButton();
-            this.textBCodigo = new System.Windows.Forms.TextBox();
-            this.dataGridTabelaLexico = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelSintatico = new System.Windows.Forms.Label();
             this.labelResultadoSintatico = new System.Windows.Forms.Label();
+            this.dataGridTabelaLexico = new System.Windows.Forms.DataGridView();
             this.openFileDialogProcurar = new System.Windows.Forms.OpenFileDialog();
+            this.textBCodigo = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitCPrincipal)).BeginInit();
             this.splitCPrincipal.Panel1.SuspendLayout();
             this.splitCPrincipal.Panel2.SuspendLayout();
             this.splitCPrincipal.SuspendLayout();
             this.toolSBotoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridTabelaLexico)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTabelaLexico)).BeginInit();
             this.SuspendLayout();
             // 
             // splitCPrincipal
@@ -59,8 +59,8 @@
             // 
             // splitCPrincipal.Panel1
             // 
-            this.splitCPrincipal.Panel1.Controls.Add(this.toolSBotoes);
             this.splitCPrincipal.Panel1.Controls.Add(this.textBCodigo);
+            this.splitCPrincipal.Panel1.Controls.Add(this.toolSBotoes);
             // 
             // splitCPrincipal.Panel2
             // 
@@ -110,28 +110,6 @@
             this.buttonExecutar.Size = new System.Drawing.Size(23, 22);
             this.buttonExecutar.Text = "Executar compilador.";
             // 
-            // textBCodigo
-            // 
-            this.textBCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBCodigo.Location = new System.Drawing.Point(0, 28);
-            this.textBCodigo.Multiline = true;
-            this.textBCodigo.Name = "textBCodigo";
-            this.textBCodigo.Size = new System.Drawing.Size(305, 359);
-            this.textBCodigo.TabIndex = 0;
-            // 
-            // dataGridTabelaLexico
-            // 
-            this.dataGridTabelaLexico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridTabelaLexico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTabelaLexico.Location = new System.Drawing.Point(0, 0);
-            this.dataGridTabelaLexico.Name = "dataGridTabelaLexico";
-            this.dataGridTabelaLexico.Size = new System.Drawing.Size(303, 340);
-            this.dataGridTabelaLexico.TabIndex = 0;
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -165,6 +143,32 @@
             this.labelResultadoSintatico.TabIndex = 3;
             this.labelResultadoSintatico.Text = "Resultado Sintático:";
             // 
+            // dataGridTabelaLexico
+            // 
+            this.dataGridTabelaLexico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridTabelaLexico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTabelaLexico.Location = new System.Drawing.Point(0, 0);
+            this.dataGridTabelaLexico.Name = "dataGridTabelaLexico";
+            this.dataGridTabelaLexico.Size = new System.Drawing.Size(303, 340);
+            this.dataGridTabelaLexico.TabIndex = 0;
+            // 
+            // openFileDialogProcurar
+            // 
+            this.openFileDialogProcurar.DefaultExt = "txt";
+            this.openFileDialogProcurar.Filter = " txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            this.openFileDialogProcurar.Title = "Arquivo a ser compilado";
+            // 
+            // textBCodigo
+            // 
+            this.textBCodigo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBCodigo.Location = new System.Drawing.Point(0, 25);
+            this.textBCodigo.Name = "textBCodigo";
+            this.textBCodigo.Size = new System.Drawing.Size(305, 361);
+            this.textBCodigo.TabIndex = 2;
+            this.textBCodigo.Text = "";
+            // 
             // FCompilador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,9 +186,9 @@
             this.splitCPrincipal.ResumeLayout(false);
             this.toolSBotoes.ResumeLayout(false);
             this.toolSBotoes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridTabelaLexico)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTabelaLexico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,12 +200,12 @@
         private System.Windows.Forms.ToolStripButton buttonProcurar;
         private System.Windows.Forms.ToolStripButton buttonLimpar;
         private System.Windows.Forms.ToolStripButton buttonExecutar;
-        private System.Windows.Forms.TextBox textBCodigo;
         private System.Windows.Forms.DataGridView dataGridTabelaLexico;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelSintatico;
         private System.Windows.Forms.Label labelResultadoSintatico;
         private System.Windows.Forms.OpenFileDialog openFileDialogProcurar;
+        private System.Windows.Forms.RichTextBox textBCodigo;
     }
 }
 

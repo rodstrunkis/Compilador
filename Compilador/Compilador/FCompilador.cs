@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Compilador
 {
@@ -19,7 +20,19 @@ namespace Compilador
 
         private void buttonProcurar_Click(object sender, EventArgs e)
         {
-            openFileDialogProcurar.ShowDialog();
+            if (openFileDialogProcurar.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string filename = openFileDialogProcurar.FileName;
+                try
+                {
+                    string texto = File.ReadAllText(filename);
+                    textBCodigo.Text = texto;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Não é possível carregar o arquivo", "ERRO DE CARREGAMENTO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
